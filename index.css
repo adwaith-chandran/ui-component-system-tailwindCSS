@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-slate-900 text-slate-100 font-sans antialiased min-h-screen;
+}
+
+.card {
+  @apply bg-slate-800/50 border border-slate-700/60 rounded-xl p-6 max-w-md mx-auto space-y-2;
+}
+
+.title {
+  @apply text-2xl font-bold text-white;
+}
+
+.subtitle {
+  @apply text-slate-400 text-sm;
+}
+
+.input-field {
+  @apply w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-indigo-500 transition;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition;
+}
