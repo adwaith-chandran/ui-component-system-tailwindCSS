@@ -50,7 +50,8 @@ import UiDemo from './pages/UiDemo';
 
 // Dashboard Layout & Child Pages
 import DashboardLayout from './layouts/DashboardLayout';
-import DashboardOverview from './pages/dashboard/DashboardOverview';
+import DashboardOverview from './pages/Dashboard/DashboardOverview';
+import JobModule from './pages/Dashboard/JobModule';
 
 export default function App() {
   return (
@@ -66,6 +67,18 @@ export default function App() {
           </Route>
 
           {/* Protected Dashboard Section with Nested Sidebar/Topbar Layout */}
+          <Route
+            path="/dashboard"
+            element={
+            <ProtectedRoute>
+            <DashboardLayout />
+            </ProtectedRoute>
+          }
+>
+          <Route index element={<DashboardOverview />} />
+          <Route path="jobs" element={<JobModule />} />
+          <Route path="post-job" element={<JobModule />} />
+          </Route>
           <Route
             path="/dashboard"
             element={
